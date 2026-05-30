@@ -66,9 +66,9 @@
     },
     "char_asen_young": {
       "id": "char_asen_young",
-      "path": "/assets/characters/asen_young_placeholder.png",
+      "path": "/assets/characters/asen_young.png",
       "usage": "阿森少年时期",
-      "status": "placeholder"
+      "status": "candidate"
     },
     "char_mac": {
       "id": "char_mac",
