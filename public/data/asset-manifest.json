@@ -9,9 +9,9 @@
     },
     "bg_hotel_mirror": {
       "id": "bg_hotel_mirror",
-      "path": "/assets/backgrounds/hotel_mirror_placeholder.png",
+      "path": "/assets/backgrounds/hotel_mirror.png",
       "usage": "酒店镜子，触发镜中走廊",
-      "status": "placeholder",
+      "status": "candidate",
       "safeTextArea": { "x": 240, "y": 120, "w": 1440, "h": 760 }
     },
     "bg_mirror_corridor": {
@@ -51,9 +51,9 @@
     },
     "bg_feed_space": {
       "id": "bg_feed_space",
-      "path": "/assets/backgrounds/feed_placeholder.png",
+      "path": "/assets/backgrounds/feed_space.png",
       "usage": "Feed舆论空间",
-      "status": "placeholder",
+      "status": "candidate",
       "safeTextArea": { "x": 100, "y": 80, "w": 1720, "h": 880 }
     }
   },
