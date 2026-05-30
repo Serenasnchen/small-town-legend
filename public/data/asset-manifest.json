@@ -37,16 +37,16 @@
     },
     "bg_hotpot_shop": {
       "id": "bg_hotpot_shop",
-      "path": "/assets/backgrounds/hotpot_placeholder.png",
+      "path": "/assets/backgrounds/hotpot_shop.png",
       "usage": "成都火锅店",
-      "status": "placeholder",
+      "status": "candidate",
       "safeTextArea": { "x": 240, "y": 120, "w": 1440, "h": 760 }
     },
     "bg_recording_studio": {
       "id": "bg_recording_studio",
-      "path": "/assets/backgrounds/studio_placeholder.png",
+      "path": "/assets/backgrounds/recording_studio.png",
       "usage": "录音棚",
-      "status": "placeholder",
+      "status": "candidate",
       "safeTextArea": { "x": 240, "y": 120, "w": 1440, "h": 760 }
     },
     "bg_feed_space": {
