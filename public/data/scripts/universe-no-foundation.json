@@ -1,0 +1,58 @@
+{
+  "id": "universe-no-foundation",
+  "scenes": [
+    {
+      "id": "u_nof_entry",
+      "type": "narration",
+      "background": "bg_hotpot_shop",
+      "text": "那天火锅店少了一个关键的人，或者大家都到了，却没有把'我们'说出口。饭吃完，各自回家。",
+      "nextScene": "u_nof_aftermath"
+    },
+    {
+      "id": "u_nof_aftermath",
+      "type": "narration",
+      "background": "bg_hotpot_shop",
+      "text": "Mac 继续做自己的音乐，Thome 继续冲锋，Sakee 继续想封帝，你继续写小镇。所有人都能发光，但没有共同体把这些光拧成一束。",
+      "nextScene": "u_nof_choice"
+    },
+    {
+      "id": "u_nof_choice",
+      "type": "choice",
+      "background": "bg_hotpot_shop",
+      "text": "外部 Boss 来袭时，大家没有统一旗帜。你可以选择一个人出手，但那不是团战。",
+      "choices": [
+        {
+          "id": "u_nof_choice_alone",
+          "text": "一个人回应，证明你足够强",
+          "nextScene": "u_nof_ending",
+          "metricImpact": { "tech": 5, "brother": -5, "opinion": 5 },
+          "semanticLabels": ["chose_alone", "mistook_pride_for_truth"],
+          "eventLog": ["u_nof_alone"]
+        },
+        {
+          "id": "u_nof_choice_try_reform",
+          "text": "多年后试图补办火锅局",
+          "nextScene": "u_nof_ending",
+          "metricImpact": { "brother": 3, "vision": 3 },
+          "semanticLabels": ["repaired_trust"],
+          "eventLog": ["u_nof_reform"]
+        }
+      ]
+    },
+    {
+      "id": "u_nof_ending",
+      "type": "ending",
+      "background": "bg_hotpot_shop",
+      "universeId": "universe-no-foundation",
+      "text": "锅底沸腾，六双筷子各夹各的，桌上没有合影，墙上也没有后来那张被粉丝反复转发的照片。",
+      "nextScene": "u_nof_return"
+    },
+    {
+      "id": "u_nof_return",
+      "type": "narration",
+      "background": "bg_mirror_corridor",
+      "text": "火锅沸腾声、空座椅摩擦地面的声音。碎片已收集。",
+      "nextScene": "act2_to_mirror"
+    }
+  ]
+}

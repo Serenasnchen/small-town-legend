@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.omc/
+.omx/
+.env
+.env.*
+*.log
+*.tsbuildinfo
+.DS_Store

@@ -1,0 +1,75 @@
+{
+  "id": "universe-silent-captain",
+  "scenes": [
+    {
+      "id": "u_sil_entry",
+      "type": "narration",
+      "background": "bg_recording_studio",
+      "text": "活死人二番战来到关键回合时，你选择沉默。你以为这是格局，兄弟却听成了退缩。",
+      "nextScene": "u_sil_groupchat"
+    },
+    {
+      "id": "u_sil_groupchat",
+      "type": "dialogue",
+      "background": "bg_recording_studio",
+      "speaker": "Thome",
+      "text": "你说句话。",
+      "nextScene": "u_sil_groupchat2"
+    },
+    {
+      "id": "u_sil_groupchat2",
+      "type": "dialogue",
+      "background": "bg_recording_studio",
+      "speaker": "Mac",
+      "text": "别乱说，但也别不说。",
+      "nextScene": "u_sil_groupchat3"
+    },
+    {
+      "id": "u_sil_groupchat3",
+      "type": "dialogue",
+      "background": "bg_recording_studio",
+      "speaker": "Sakee",
+      "text": "外面怎么打我不管。你要是站，我站你旁边。",
+      "nextScene": "u_sil_choice"
+    },
+    {
+      "id": "u_sil_choice",
+      "type": "choice",
+      "background": "bg_recording_studio",
+      "text": "群聊停在「你说句话啊」，输入框亮了很久，最后熄灭。",
+      "choices": [
+        {
+          "id": "u_sil_choice_speak",
+          "text": "打破沉默，用作品回应",
+          "nextScene": "u_sil_ending",
+          "metricImpact": { "brother": 5, "tech": 5, "opinion": 3 },
+          "semanticLabels": ["answered_with_music", "protected_brother"],
+          "eventLog": ["u_sil_speak"]
+        },
+        {
+          "id": "u_sil_choice_stay_silent",
+          "text": "继续沉默，让时间说话",
+          "nextScene": "u_sil_ending",
+          "metricImpact": { "brother": -8, "vision": -3, "publicPressure": -5 },
+          "semanticLabels": ["stayed_silent", "chose_alone"],
+          "eventLog": ["u_sil_stay"]
+        }
+      ]
+    },
+    {
+      "id": "u_sil_ending",
+      "type": "ending",
+      "background": "bg_recording_studio",
+      "universeId": "universe-silent-captain",
+      "text": "外界说你成熟了，队内说你不再和大家站在一起。Sakee 的裂缝提前出现，他第一次在群里没有回复你的消息。",
+      "nextScene": "u_sil_return"
+    },
+    {
+      "id": "u_sil_return",
+      "type": "narration",
+      "background": "bg_mirror_corridor",
+      "text": "群聊输入框闪烁声、热搜刷新声、beat drop 前一秒的静音。碎片已收集。",
+      "nextScene": "act2_to_mirror"
+    }
+  ]
+}

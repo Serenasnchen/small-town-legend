@@ -1,0 +1,102 @@
+{
+  "version": "1.0",
+  "categories": {
+    "真实/表演": {
+      "description": "阿森是否保持真实，还是在表演某种人设",
+      "labels": {
+        "stayed_real": "坚持真实自我，不做违心选择",
+        "performed_authenticity": "表演真诚，行为与内心不一致",
+        "chose_image_over_music": "选择形象/人设优先于音乐",
+        "admitted_insecurity": "承认脆弱或不安全感",
+        "hid_behind_persona": "躲藏在自己构建的人设背后",
+        "chose_stability": "选择稳定而非冒险",
+        "delayed_music": "推迟音乐梦想",
+        "obeyed_system": "服从体制规则"
+      }
+    },
+    "兄弟/信任": {
+      "description": "与兄弟、团队的关系选择",
+      "labels": {
+        "protected_brother": "保护兄弟或团队利益",
+        "abandoned_day1": "放弃最初一起的兄弟",
+        "shared_credit": "分享功劳和认可",
+        "chose_alone": "选择独自前行",
+        "repaired_trust": "修复被破坏的信任"
+      }
+    },
+    "舆论/回应": {
+      "description": "面对公众舆论时的回应方式",
+      "labels": {
+        "answered_publicly": "公开回应争议",
+        "stayed_silent": "保持沉默",
+        "deflected_topic": "转移话题",
+        "answered_with_music": "用音乐作品回应",
+        "fed_the_drama": "火上浇油，扩大争议"
+      }
+    },
+    "根/恨/家": {
+      "description": "与家乡、家庭、根源的关系",
+      "labels": {
+        "remembered_hometown": "记得并回馈家乡",
+        "rejected_hometown": "拒绝或否定家乡",
+        "faced_mother_wound": "面对母亲的创伤或关系",
+        "held_grandma_memory": "保有对奶奶的记忆和情感",
+        "turned_hate_into_drive": "把恨意转化为前进动力",
+        "turned_hate_into_love": "把恨意转化为爱或和解"
+      }
+    },
+    "成功/膨胀": {
+      "description": "面对成功和名利时的态度",
+      "labels": {
+        "chose_commercial_route": "选择商业化路线",
+        "showed_wealth": "展示财富或成功",
+        "feared_not_enough": "害怕不够成功",
+        "chose_long_term_music": "选择长期音乐路线",
+        "mistook_pride_for_truth": "把骄傲误认为真实"
+      }
+    },
+    "技术/作品": {
+      "description": "音乐技术和作品质量相关",
+      "labels": {
+        "answered_diss_with_music": "用音乐技术回应质疑",
+        "restrained_response": "克制但有力的回应",
+        "work_over_noise": "专注作品而非噪音",
+        "chose_immediate_clapback": "选择即时反击",
+        "elevated_craft": "提升技艺和作品质量"
+      }
+    }
+  },
+  "agentImpact": {
+    "stayed_real": ["fan_berry", "fan_echo", "critic_lin"],
+    "performed_authenticity": ["fan_berry", "fan_echo", "hater_dark"],
+    "chose_image_over_music": ["fan_echo", "critic_lin", "elder_long"],
+    "admitted_insecurity": ["fan_berry", "passerby"],
+    "hid_behind_persona": ["hater_dark", "gossip_z"],
+    "protected_brother": ["fan_berry", "peer_rival", "elder_long"],
+    "abandoned_day1": ["fan_berry", "peer_rival", "elder_long"],
+    "shared_credit": ["critic_lin", "elder_long"],
+    "chose_alone": ["peer_rival", "fan_berry"],
+    "repaired_trust": ["fan_berry", "critic_lin"],
+    "answered_publicly": ["gossip_z", "passerby"],
+    "stayed_silent": ["hater_dark", "gossip_z", "passerby"],
+    "deflected_topic": ["critic_lin", "passerby"],
+    "answered_with_music": ["fan_echo", "critic_lin", "peer_rival", "elder_long"],
+    "fed_the_drama": ["gossip_z", "hater_dark", "passerby"],
+    "remembered_hometown": ["fan_berry", "elder_long", "passerby"],
+    "rejected_hometown": ["fan_berry", "elder_long"],
+    "faced_mother_wound": ["fan_berry", "passerby"],
+    "held_grandma_memory": ["fan_berry", "passerby"],
+    "turned_hate_into_drive": ["fan_echo", "critic_lin", "elder_long"],
+    "turned_hate_into_love": ["fan_berry", "elder_long"],
+    "chose_commercial_route": ["fan_echo", "critic_lin", "gossip_z"],
+    "showed_wealth": ["hater_dark", "gossip_z", "passerby"],
+    "feared_not_enough": ["fan_berry", "passerby"],
+    "chose_long_term_music": ["fan_echo", "critic_lin", "elder_long"],
+    "mistook_pride_for_truth": ["fan_echo", "critic_lin", "peer_rival"],
+    "answered_diss_with_music": ["fan_echo", "critic_lin", "peer_rival", "elder_long"],
+    "restrained_response": ["critic_lin", "elder_long"],
+    "work_over_noise": ["fan_echo", "critic_lin"],
+    "chose_immediate_clapback": ["gossip_z", "hater_dark"],
+    "elevated_craft": ["fan_echo", "critic_lin", "peer_rival"]
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "id": "main",
+  "scenes": [
+    {
+      "id": "act0_stadium_opening",
+      "type": "narration",
+      "background": "bg_stadium_stage",
+      "text": "黑场。先听见雨声，再听见体育馆里万人的合唱。灯光像雨一样落下，你站在升降台上，第一句还没唱，台下已经先唱了起来。",
+      "nextScene": "act0_stadium_breath"
+    },
+    {
+      "id": "act0_stadium_breath",
+      "type": "narration",
+      "background": "bg_stadium_stage",
+      "text": "你的手在抖。不是害怕，是意识到这条路本来可以无数次中断。吸气。抬头。听见人群。开口。",
+      "nextScene": "act0_stadium_after"
+    },
+    {
+      "id": "act0_stadium_after",
+      "type": "dialogue",
+      "background": "bg_hotel_mirror",
+      "speaker": "经纪人",
+      "character": "char_reporter",
+      "text": "下一站长沙，媒体已经安排好了。Top3 的采访你后天要出。",
+      "nextScene": "act0_hotel_room"
+    },
+    {
+      "id": "act0_hotel_room",
+      "type": "narration",
+      "background": "bg_hotel_mirror",
+      "text": "酒店房间窗边放着四件东西：旧耳机、重庆大学学生卡、火锅店合影、写着 DAY1 的旧歌词本。你洗掉舞台妆，看见镜子里不是现在的自己，而是小镇少年。雨滴从窗外滑下，每一滴都映出一个没走过的人生。",
+      "nextScene": "act0_mirror_prompt"
+    },
+    {
+      "id": "act0_mirror_prompt",
+      "type": "dialogue",
+      "background": "bg_hotel_mirror",
+      "speaker": "镜中的少年",
+      "character": "char_mirror_self",
+      "text": "他们说你从小镇走到了体育馆。可只有我知道，你也差一点走向很多个没有掌声的地方。",
+      "nextScene": "act1_hometown_opening"
+    },
+    {
+      "id": "act1_hometown_opening",
+      "type": "narration",
+      "background": "bg_classroom",
+      "text": "咸丰。小镇路口。奶奶把钱塞给你，叫你别饿着。你嘴上说晓得了，心里想的是离开。",
+      "nextScene": "act1_hometown_choice"
+    },
+    {
+      "id": "act1_hometown_choice",
+      "type": "choice",
+      "background": "bg_classroom",
+      "text": "镜子提示第一个选择：把小镇丢下，还是把小镇带走？",
+      "choices": [
+        {
+          "id": "choice_take_hometown",
+          "text": "把小镇带走，把家人、方言、县城人物写进歌里",
+          "nextScene": "act1_after_choice",
+          "metricImpact": { "vision": 5, "brother": 3, "opinion": 2 },
+          "semanticLabels": ["remembered_hometown", "stayed_real"],
+          "eventLog": ["choice_take_hometown"],
+          "mirrorCost": "你选择了把根带在身上。这条路很重，但你的歌里永远有具体的人。"
+        },
+        {
+          "id": "choice_leave_hometown",
+          "text": "切断小镇，只把'离开'当成人设",
+          "nextScene": "act1_after_choice",
+          "metricImpact": { "vision": -3, "brother": -2, "opinion": 5 },
+          "semanticLabels": ["rejected_hometown", "performed_authenticity"],
+          "eventLog": ["choice_leave_hometown"],
+          "mirrorCost": "你选择了轻装上阵。但有一天你会发现，轻到连自己都抓不住。"
+        }
+      ]
+    },
+    {
+      "id": "act1_after_choice",
+      "type": "narration",
+      "background": "bg_classroom",
+      "text": [
+        {
+          "condition": "eventLog.includes('choice_take_hometown')",
+          "value": "你把奶奶塞的钱放进了钱包最里层。不是需要，是需要记得。"
+        },
+        {
+          "condition": "eventLog.includes('choice_leave_hometown')",
+          "value": "你把钱放进了抽屉，和旧照片一起。以后你会需要它们来证明自己从哪来。"
+        },
+        {
+          "default": true,
+          "value": "你站在路口，车来了。"
+        }
+      ],
+      "nextScene": "act2_985_opening"
+    },
+    {
+      "id": "act2_985_opening",
+      "type": "dialogue",
+      "background": "bg_classroom",
+      "speaker": "辅导员",
+      "character": "char_reporter",
+      "text": "你成绩不差。年轻人以为梦想最贵，其实稳定才贵。",
+      "nextScene": "act2_985_choice"
+    },
+    {
+      "id": "act2_985_choice",
+      "type": "choice",
+      "background": "bg_classroom",
+      "text": "老师把志愿表推到你面前。教室里耳机里 beat 偷偷响。你看见两条人生：一条通向毕业证，一条通向没人保证的麦克风。",
+      "choices": [
+        {
+          "id": "choice_stay_985",
+          "text": "认真考 985，读完再追梦",
+          "nextScene": "act2_after_stay",
+          "metricImpact": { "tech": -3, "vision": 5, "brother": -5, "opinion": -5 },
+          "semanticLabels": ["chose_stability", "delayed_music", "obeyed_system"],
+          "eventLog": ["choice_stay_985"],
+          "mirrorCost": "这条路安稳，但某些声音会晚一点出现。"
+        },
+        {
+          "id": "choice_drop_out",
+          "text": "辍学，押上全部搞说唱",
+          "nextScene": "act2_after_drop",
+          "metricImpact": { "tech": 5, "vision": 3, "brother": 5, "opinion": 5, "publicPressure": 10 },
+          "semanticLabels": ["chose_long_term_music", "turned_hate_into_drive"],
+          "eventLog": ["choice_drop_out"],
+          "mirrorCost": "你没有给自己留退路。 Mic 前没有 backup plan。"
+        }
+      ]
+    },
+    {
+      "id": "act2_after_stay",
+      "type": "narration",
+      "background": "bg_classroom",
+      "text": "你交回了志愿表。笔尖在纸上划过的声音像一声 snare。",
+      "nextScene": "act2_to_feed"
+    },
+    {
+      "id": "act2_after_drop",
+      "type": "narration",
+      "background": "bg_classroom",
+      "text": "你把学生卡留在了桌上。走出教室时，耳机里的 beat 第一次和心跳对上了拍。",
+      "nextScene": "act2_to_feed"
+    },
+    {
+      "id": "act2_to_feed",
+      "type": "feed",
+      "background": "bg_feed_space",
+      "text": "舆论场",
+      "nextScene": "act2_to_mirror"
+    },
+    {
+      "id": "act2_to_mirror",
+      "type": "mirror",
+      "background": "bg_mirror_corridor",
+      "text": "镜中走廊",
+      "nextScene": "act3_xiamen_opening"
+    },
+    {
+      "id": "act3_xiamen_opening",
+      "type": "narration",
+      "background": "bg_xiamen_sea",
+      "text": "厦门。海边城市漂亮得像不需要你的痛苦。你交不起房租，也不想认输。某个夜里，你写下 DAY1，不是为了火，是为了不让兄弟白等。",
+      "nextScene": "act3_xiamen_choice"
+    },
+    {
+      "id": "act3_xiamen_choice",
+      "type": "choice",
+      "background": "bg_xiamen_sea",
+      "text": "Mac 发来消息：成都那边有个局，火锅桌上聊。",
+      "choices": [
+        {
+          "id": "choice_go_chengdu",
+          "text": "去成都",
+          "nextScene": "act5_hotpot_opening",
+          "metricImpact": { "brother": 8, "vision": 3 },
+          "semanticLabels": ["protected_brother", "stayed_real"],
+          "eventLog": ["choice_go_chengdu"]
+        },
+        {
+          "id": "choice_stay_xiamen",
+          "text": "留在厦门继续写",
+          "nextScene": "act5_hotpot_opening",
+          "metricImpact": { "tech": 5, "brother": -3 },
+          "semanticLabels": ["chose_alone", "work_over_noise"],
+          "eventLog": ["choice_stay_xiamen"]
+        }
+      ]
+    },
+    {
+      "id": "act5_hotpot_opening",
+      "type": "dialogue",
+      "background": "bg_hotpot_shop",
+      "speaker": "Mac",
+      "character": "char_mac",
+      "text": "你写东西像在还债。",
+      "nextScene": "act5_hotpot_dialogue2"
+    },
+    {
+      "id": "act5_hotpot_dialogue2",
+      "type": "dialogue",
+      "background": "bg_hotpot_shop",
+      "speaker": "你",
+      "character": "char_asen_neutral",
+      "text": "我欠谁？",
+      "nextScene": "act5_hotpot_dialogue3"
+    },
+    {
+      "id": "act5_hotpot_dialogue3",
+      "type": "dialogue",
+      "background": "bg_hotpot_shop",
+      "speaker": "Sakee",
+      "text": "欠以前那个没人听的自己。",
+      "nextScene": "act5_hotpot_dialogue4"
+    },
+    {
+      "id": "act5_hotpot_dialogue4",
+      "type": "dialogue",
+      "background": "bg_hotpot_shop",
+      "speaker": "Thome",
+      "text": "那就别还了，直接抢银行。",
+      "nextScene": "act5_hotpot_dialogue5"
+    },
+    {
+      "id": "act5_hotpot_dialogue5",
+      "type": "dialogue",
+      "background": "bg_hotpot_shop",
+      "speaker": "BOSS X",
+      "text": "别只想抢。你们要建一个别人抢不走的地方。",
+      "nextScene": "act5_hotpot_choice"
+    },
+    {
+      "id": "act5_hotpot_choice",
+      "type": "choice",
+      "background": "bg_hotpot_shop",
+      "text": "火锅雾气里，每个人都像刚从不同服务器上线。你们把名字定下：DIGI GHETTO。",
+      "choices": [
+        {
+          "id": "choice_form_team",
+          "text": "成团，把'我们'说出口",
+          "nextScene": "act5_hotpot_after",
+          "metricImpact": { "brother": 10, "vision": 5 },
+          "semanticLabels": ["protected_brother", "shared_credit", "stayed_real"],
+          "eventLog": ["choice_form_team"]
+        },
+        {
+          "id": "choice_loose_crew",
+          "text": "保持松散，各走各的",
+          "nextScene": "act5_hotpot_after",
+          "metricImpact": { "brother": -5, "vision": -2 },
+          "semanticLabels": ["chose_alone"],
+          "eventLog": ["choice_loose_crew"]
+        }
+      ]
+    },
+    {
+      "id": "act5_hotpot_after",
+      "type": "narration",
+      "background": "bg_hotpot_shop",
+      "text": [
+        {
+          "condition": "eventLog.includes('choice_form_team')",
+          "value": "火锅沸腾。六双筷子在雾气里交错，你们知道从这一刻起，'我'变成了'我们'。"
+        },
+        {
+          "condition": "eventLog.includes('choice_loose_crew')",
+          "value": "火锅还在沸腾，但每个人都知道，这顿饭吃完，路还是各走各的。"
+        },
+        {
+          "default": true,
+          "value": "火锅咕嘟咕嘟地响，像某种约定。"
+        }
+      ],
+      "nextScene": "act6_shadow_trial"
+    },
+    {
+      "id": "act6_shadow_trial",
+      "type": "dialogue",
+      "background": "bg_recording_studio",
+      "speaker": "影子",
+      "character": "char_mirror_self",
+      "text": "你像谁？",
+      "nextScene": "act6_shadow_trial2"
+    },
+    {
+      "id": "act6_shadow_trial2",
+      "type": "dialogue",
+      "background": "bg_recording_studio",
+      "speaker": "你",
+      "character": "char_asen_neutral",
+      "text": "像很多听过的歌。",
+      "nextScene": "act6_shadow_trial3"
+    },
+    {
+      "id": "act6_shadow_trial3",
+      "type": "dialogue",
+      "background": "bg_recording_studio",
+      "speaker": "影子",
+      "character": "char_mirror_self",
+      "text": "那你是谁？",
+      "nextScene": "act6_shadow_trial4"
+    },
+    {
+      "id": "act6_shadow_trial4",
+      "type": "dialogue",
+      "background": "bg_recording_studio",
+      "speaker": "你",
+      "character": "char_asen_neutral",
+      "text": "我是那个从咸丰出来，到了今天还听得见山里雨声的人。",
+      "nextScene": "act6_shadow_after"
+    },
+    {
+      "id": "act6_shadow_after",
+      "type": "narration",
+      "background": "bg_recording_studio",
+      "text": "影子审判通过。你终于把质疑变成了原创升级。",
+      "nextScene": "act10_return_stadium"
+    },
+    {
+      "id": "act10_return_stadium",
+      "type": "narration",
+      "background": "bg_stadium_stage",
+      "text": [
+        {
+          "condition": "collectedFragments['universe-engineer']",
+          "value": "工程师宇宙的键盘声、体育馆里的雨还在下。你站在台上，所有平行宇宙的声音成为 live 版采样。"
+        },
+        {
+          "default": true,
+          "value": "体育馆里的雨还在下。你站在台上，所有平行宇宙的声音成为 live 版采样。"
+        }
+      ],
+      "nextScene": "act10_final"
+    },
+    {
+      "id": "act10_final",
+      "type": "ending",
+      "background": "bg_stadium_stage",
+      "text": "如果每一个我都没能走到这里，那就让他们一起唱完这首。最后一句唱完，雨声停了一秒，然后全场合唱：在雨后醒来。",
+      "nextScene": "act10_end"
+    },
+    {
+      "id": "act10_end",
+      "type": "narration",
+      "background": "bg_stadium_stage",
+      "text": "【MVP 体验结束】感谢试玩《小镇传奇》。",
+      "nextScene": "act0_stadium_opening"
+    }
+  ]
+}

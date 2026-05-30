@@ -1,0 +1,59 @@
+{
+  "id": "universe-fast-star",
+  "scenes": [
+    {
+      "id": "u_fast_entry",
+      "type": "narration",
+      "background": "bg_stadium_stage",
+      "text": "你在节目里意外走红。团队要求你复制那个表情、那句口头禅、那种副歌。你很快有了商演和热搜，却没有经历厦门的低谷，也没有写出真正的 DAY1。",
+      "nextScene": "u_fast_backstage"
+    },
+    {
+      "id": "u_fast_backstage",
+      "type": "dialogue",
+      "background": "bg_stadium_stage",
+      "speaker": "经纪人",
+      "text": "新歌继续用那个 hook，数据很好。",
+      "nextScene": "u_fast_choice"
+    },
+    {
+      "id": "u_fast_choice",
+      "type": "choice",
+      "background": "bg_stadium_stage",
+      "text": "公司要求你在新歌里继续复制爆款。你看着词本，突然发现自己已经很久没写过具体的人和具体的痛。",
+      "choices": [
+        {
+          "id": "u_fast_choice_copy",
+          "text": "继续复制爆款，成为综艺常客",
+          "nextScene": "u_fast_ending",
+          "metricImpact": { "opinion": 10, "vision": -5 },
+          "semanticLabels": ["chose_commercial_route", "chose_image_over_music"],
+          "eventLog": ["u_fast_copy"]
+        },
+        {
+          "id": "u_fast_choice_real",
+          "text": "直播唱未发行的真歌，唱小镇和失败",
+          "nextScene": "u_fast_ending",
+          "metricImpact": { "opinion": -5, "vision": 5 },
+          "semanticLabels": ["stayed_real", "admitted_insecurity"],
+          "eventLog": ["u_fast_real"]
+        }
+      ]
+    },
+    {
+      "id": "u_fast_ending",
+      "type": "ending",
+      "background": "bg_stadium_stage",
+      "universeId": "universe-fast-star",
+      "text": "大型晚会后台。提词器亮着，你要唱那首公司安排的爆款。隔壁舞台传来大合唱，你第一次羡慕那些没有提词器的人。",
+      "nextScene": "u_fast_return"
+    },
+    {
+      "id": "u_fast_return",
+      "type": "narration",
+      "background": "bg_mirror_corridor",
+      "text": "提词器滚动声、商演烟花声、后台隔墙传来的万人合唱。碎片已收集。",
+      "nextScene": "act2_to_mirror"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "backgrounds": {
+    "bg_stadium_stage": {
+      "id": "bg_stadium_stage",
+      "path": "/assets/backgrounds/stadium_stage_placeholder.png",
+      "usage": "体育馆舞台，开场和终章",
+      "status": "placeholder",
+      "safeTextArea": { "x": 240, "y": 120, "w": 1440, "h": 760 }
+    },
+    "bg_hotel_mirror": {
+      "id": "bg_hotel_mirror",
+      "path": "/assets/backgrounds/hotel_mirror_placeholder.png",
+      "usage": "酒店镜子，触发镜中走廊",
+      "status": "placeholder",
+      "safeTextArea": { "x": 240, "y": 120, "w": 1440, "h": 760 }
+    },
+    "bg_mirror_corridor": {
+      "id": "bg_mirror_corridor",
+      "path": "/assets/backgrounds/mirror_corridor_placeholder.png",
+      "usage": "镜中走廊，宇宙入口",
+      "status": "placeholder",
+      "safeTextArea": { "x": 240, "y": 120, "w": 1440, "h": 760 }
+    },
+    "bg_classroom": {
+      "id": "bg_classroom",
+      "path": "/assets/backgrounds/classroom_placeholder.png",
+      "usage": "教室/985节点",
+      "status": "placeholder",
+      "safeTextArea": { "x": 240, "y": 120, "w": 1440, "h": 760 }
+    },
+    "bg_xiamen_sea": {
+      "id": "bg_xiamen_sea",
+      "path": "/assets/backgrounds/xiamen_sea_placeholder.png",
+      "usage": "厦门海边",
+      "status": "placeholder",
+      "safeTextArea": { "x": 240, "y": 120, "w": 1440, "h": 760 }
+    },
+    "bg_hotpot_shop": {
+      "id": "bg_hotpot_shop",
+      "path": "/assets/backgrounds/hotpot_placeholder.png",
+      "usage": "成都火锅店",
+      "status": "placeholder",
+      "safeTextArea": { "x": 240, "y": 120, "w": 1440, "h": 760 }
+    },
+    "bg_recording_studio": {
+      "id": "bg_recording_studio",
+      "path": "/assets/backgrounds/studio_placeholder.png",
+      "usage": "录音棚",
+      "status": "placeholder",
+      "safeTextArea": { "x": 240, "y": 120, "w": 1440, "h": 760 }
+    },
+    "bg_feed_space": {
+      "id": "bg_feed_space",
+      "path": "/assets/backgrounds/feed_placeholder.png",
+      "usage": "Feed舆论空间",
+      "status": "placeholder",
+      "safeTextArea": { "x": 100, "y": 80, "w": 1720, "h": 880 }
+    }
+  },
+  "characters": {
+    "char_asen_neutral": {
+      "id": "char_asen_neutral",
+      "path": "/assets/characters/asen_neutral_placeholder.png",
+      "usage": "阿森默认立绘",
+      "status": "placeholder"
+    },
+    "char_asen_young": {
+      "id": "char_asen_young",
+      "path": "/assets/characters/asen_young_placeholder.png",
+      "usage": "阿森少年时期",
+      "status": "placeholder"
+    },
+    "char_mac": {
+      "id": "char_mac",
+      "path": "/assets/characters/mac_placeholder.png",
+      "usage": "Mac",
+      "status": "placeholder"
+    },
+    "char_reporter": {
+      "id": "char_reporter",
+      "path": "/assets/characters/reporter_placeholder.png",
+      "usage": "记者",
+      "status": "placeholder"
+    },
+    "char_mirror_self": {
+      "id": "char_mirror_self",
+      "path": "/assets/characters/mirror_self_placeholder.png",
+      "usage": "镜中少年",
+      "status": "placeholder"
+    }
+  },
+  "ui": {},
+  "effects": {
+    "fx_rain_overlay": {
+      "id": "fx_rain_overlay",
+      "path": "/assets/effects/rain_overlay_placeholder.png",
+      "usage": "雨效果叠加层",
+      "status": "placeholder"
+    },
+    "fx_mirror_crack": {
+      "id": "fx_mirror_crack",
+      "path": "/assets/effects/mirror_crack_placeholder.png",
+      "usage": "镜面裂纹效果",
+      "status": "placeholder"
+    }
+  },
+  "audio": {
+    "bgm_stadium": {
+      "id": "bgm_stadium",
+      "path": "/assets/audio/bgm_stadium_placeholder.mp3",
+      "usage": "体育馆BGM",
+      "status": "placeholder"
+    },
+    "bgm_mirror": {
+      "id": "bgm_mirror",
+      "path": "/assets/audio/bgm_mirror_placeholder.mp3",
+      "usage": "镜中走廊BGM",
+      "status": "placeholder"
+    },
+    "sfx_rain": {
+      "id": "sfx_rain",
+      "path": "/assets/audio/sfx_rain_placeholder.mp3",
+      "usage": "雨声",
+      "status": "placeholder"
+    }
+  }
+}

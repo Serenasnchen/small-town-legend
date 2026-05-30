@@ -1,0 +1,59 @@
+{
+  "id": "universe-engineer",
+  "scenes": [
+    {
+      "id": "u_eng_entry",
+      "type": "narration",
+      "background": "bg_classroom",
+      "text": "你没有辍学。你按时毕业，进入重庆的一家工程公司。白天改图、做报告、开会，晚上在公司楼下停车场用手机录 freestyle。",
+      "nextScene": "u_eng_office"
+    },
+    {
+      "id": "u_eng_office",
+      "type": "dialogue",
+      "background": "bg_classroom",
+      "speaker": "同事",
+      "text": "周末有什么安排？",
+      "nextScene": "u_eng_choice"
+    },
+    {
+      "id": "u_eng_choice",
+      "type": "choice",
+      "background": "bg_classroom",
+      "text": "你的人生稳定到没人会替你担心，也稳定到没人会为你尖叫。",
+      "choices": [
+        {
+          "id": "u_eng_choice_openmic",
+          "text": "下班后组织 open mic，做本地高校说唱圈的隐形前辈",
+          "nextScene": "u_eng_ending",
+          "metricImpact": { "tech": 3, "brother": 2 },
+          "semanticLabels": ["stayed_real", "work_over_noise"],
+          "eventLog": ["u_eng_openmic"]
+        },
+        {
+          "id": "u_eng_choice_quit",
+          "text": "三十岁辞职追梦，发布《Day 3000》",
+          "nextScene": "u_eng_ending",
+          "metricImpact": { "vision": 5, "opinion": 5, "publicPressure": 10 },
+          "semanticLabels": ["turned_hate_into_drive", "chose_long_term_music"],
+          "eventLog": ["u_eng_quit"]
+        }
+      ]
+    },
+    {
+      "id": "u_eng_ending",
+      "type": "ending",
+      "background": "bg_stadium_stage",
+      "universeId": "universe-engineer",
+      "text": "很多年后，同事在你的抽屉里看见一台落灰的 MPC。他说，年轻时玩过。对方点点头，没有再问。这是这个世界里，唯一一次有人问起你的音乐。",
+      "nextScene": "u_eng_return"
+    },
+    {
+      "id": "u_eng_return",
+      "type": "narration",
+      "background": "bg_mirror_corridor",
+      "text": "抽屉关上的声音像一声 snare。碎片已收集。",
+      "nextScene": "act2_to_mirror"
+    }
+  ]
+}
