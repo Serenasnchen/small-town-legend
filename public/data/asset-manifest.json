@@ -72,21 +72,21 @@
     },
     "char_mac": {
       "id": "char_mac",
-      "path": "/assets/characters/mac_placeholder.png",
+      "path": "/assets/characters/mac.png",
       "usage": "Mac",
-      "status": "placeholder"
+      "status": "candidate"
     },
     "char_reporter": {
       "id": "char_reporter",
-      "path": "/assets/characters/reporter_placeholder.png",
+      "path": "/assets/characters/reporter.png",
       "usage": "记者",
-      "status": "placeholder"
+      "status": "candidate"
     },
     "char_mirror_self": {
       "id": "char_mirror_self",
-      "path": "/assets/characters/mirror_self_placeholder.png",
+      "path": "/assets/characters/mirror_self.png",
       "usage": "镜中少年",
-      "status": "placeholder"
+      "status": "candidate"
     }
   },
   "ui": {},
