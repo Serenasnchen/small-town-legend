@@ -16,16 +16,16 @@
     },
     "bg_mirror_corridor": {
       "id": "bg_mirror_corridor",
-      "path": "/assets/backgrounds/mirror_corridor_placeholder.png",
+      "path": "/assets/backgrounds/mirror_corridor.png",
       "usage": "镜中走廊，宇宙入口",
-      "status": "placeholder",
+      "status": "candidate",
       "safeTextArea": { "x": 240, "y": 120, "w": 1440, "h": 760 }
     },
     "bg_classroom": {
       "id": "bg_classroom",
-      "path": "/assets/backgrounds/classroom_placeholder.png",
+      "path": "/assets/backgrounds/classroom.png",
       "usage": "教室/985节点",
-      "status": "placeholder",
+      "status": "candidate",
       "safeTextArea": { "x": 240, "y": 120, "w": 1440, "h": 760 }
     },
     "bg_xiamen_sea": {
